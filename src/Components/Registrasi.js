@@ -10,7 +10,7 @@ import {
   Button,
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import { firebaseAuthentication, googleProvider } from "../config/firebase";
+import { firebaseAuthentication } from "../config/firebase";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -41,16 +41,6 @@ export default class Registrasi extends Component {
       })
       .catch((err) => {
         alert(err.message);
-      });
-  };
-  handleLoginWithGoogle = () => {
-    firebaseAuthentication
-      .signInWithPopup(googleProvider)
-      .then(() => {
-        this.props.history.push("/home");
-      })
-      .catch((error) => {
-        alert(error.message);
       });
   };
 
@@ -84,19 +74,14 @@ export default class Registrasi extends Component {
                   required
                 />
               </FormGroup>
-              <Button color="primary" block>
+              <Button
+                color="primary"
+                block
+                style={{ marginTop: 20, marginBottom: 20 }}
+              >
                 Sign Up
               </Button>
             </Form>
-            <Button
-              onClick={this.handleLoginWithGoogle}
-              outline
-              color="secondary"
-              block
-              style={{ marginTop: 20, marginBottom: 20}}
-            >
-              Login With Google
-            </Button>
             <p>
               Already have an account? <Link to="/login">Login</Link>
             </p>
