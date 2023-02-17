@@ -79,7 +79,7 @@ export default class Home extends Component {
               </a>
             </div>
           </div>
-          <h2>Book List</h2>
+          <h2>My Book List</h2>
           <Card>
             {!this.state.loading ? (
               <Table responsive>
