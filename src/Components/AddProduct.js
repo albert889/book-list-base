@@ -102,7 +102,7 @@ export default class AddProduct extends Component {
       <div>
         <Navbar value={false} />
         <div className="container mt-3">
-          <h1 className="fw-bold">Add Product</h1>
+          <h1 className="fw-bold">Add Book</h1>
           <form onSubmit={handleAddProduct}>
             <div className="mb-2">
               <label className="form-label">Book Title</label>

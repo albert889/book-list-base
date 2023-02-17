@@ -148,7 +148,7 @@ export default class EditProduct extends Component {
       <div>
         <Navbar value={false} />
         <div className="container mt-3">
-          <h1 className="fw-bold">Edit Product</h1>
+          <h1 className="fw-bold">Edit Book</h1>
 
           <form onSubmit={handleUpdateProduct}>
             <div className="mb-2">
